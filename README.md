@@ -1,0 +1,38 @@
+# IPC Utilities
+
+## Original README by Peter Johnson
+
+```
+Copyright (c) 2000 Peter A. Johnson
+
+Version $Id: README,v 1.2 2000/10/25 15:28:44 pete Exp $
+
+Some header files are (c) Copyright Hewlett-Packard Company, 1985
+
+This directory contains utilities for reading filesystem for the HP
+Integral Personal Computer.  These utilities may also work for other
+HP-UX obsolete filesystems as well, but I have not tested them on
+anything other than an IPC.  These utilities should not work for any
+modern UNIX file systems.  If they do, then you should store your data
+somewhere else.
+
+Currently, this program has only been compiled for Sun Solaris 7. If
+you modify this software, please provide me with the changes so that I
+can incorporate them back into the original.
+
+Also, some of the include files are copyright by HP. I would like to
+distribute a clean version of this code, so if anyone would like to
+rewrite those, I would incorporate that as well.
+
+To install, you need GNU make or you must compile by hand. The tools
+should compile on most UNIX systems. I have compiled sucessfully on
+Solaris 7 and OpenBSD. You will need gcc or a compiler with an alloca
+function - this shouldn't be too hard to find.
+
+Please let me know if you find this software useful or have any
+feedback for me.
+
+Thanks,
+
+pete@coho.org
+```
