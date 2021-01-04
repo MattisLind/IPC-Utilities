@@ -1,0 +1,17 @@
+#undef physadr
+#undef iord_t
+#undef swck_t
+#undef use_t
+#undef daddr_t
+#undef caddr_t
+#undef uint
+#undef ushort
+#undef ino_t
+#undef cnt_t
+#undef time_t
+#undef label_t
+#undef dev_t
+#undef off_t
+#undef paddr_t
+#undef key_t
+#undef pgadr_t

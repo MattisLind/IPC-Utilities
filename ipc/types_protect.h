@@ -1,0 +1,17 @@
+#define physadr IPC_physadr
+#define iord_t IPC_iord_t
+#define swck_t IPC_swck_t
+#define use_t IPC_use_t
+#define daddr_t IPC_daddr_t
+#define caddr_t IPC_caddr_t
+#define uint IPC_uint
+#define ushort IPC_ushort
+#define ino_t IPC_ino_t
+#define cnt_t IPC_cnt_t
+#define time_t IPC_time_t
+#define label_t IPC_label_t
+#define dev_t IPC_dev_t
+#define off_t IPC_off_t
+#define paddr_t IPC_paddr_t
+#define key_t IPC_key_t
+#define pgadr_t IPC_pgadr_t
