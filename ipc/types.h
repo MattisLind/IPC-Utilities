@@ -37,4 +37,4 @@ typedef	long		off_t;
 typedef	long		paddr_t;
 typedef	long		key_t;
 typedef ushort		pgadr_t;
-#endif not TYPES_H
+#endif // not TYPES_H

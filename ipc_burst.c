@@ -21,6 +21,11 @@ static char *ipc_burst_revision = "$Id: ipc_burst.c,v 1.4 2000/10/25 15:32:12 pe
 #include <sys/types.h>
 #include <time.h>
 #include <utime.h>
+#include <stdlib.h>
+#include <string.h>
+
+int chmod(const char *, mode_t);
+int mkdir(const char *, mode_t);
 
 static void set_time(IPC_Filsys *fs,
 		     const char *ipcname, const char *unixname)
@@ -98,7 +103,7 @@ static void burst(IPC_Filsys *fs, const char *path, const char *dest)
     }
 }
 
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
   IPC_Filsys *fs;
   IPC_File *fp;

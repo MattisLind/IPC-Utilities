@@ -16,6 +16,7 @@ static char *ipc_utils_revision = "$Id: ipc_utils.c,v 1.4 2000/10/25 15:32:11 pe
 #include <sys/mman.h>
 #include <assert.h>
 #include <string.h>
+#include <stdlib.h>
 
 unsigned dinode_addr(struct dinode *dinode, unsigned addr)
 {
@@ -270,8 +271,8 @@ IPC_Filsys *IPC_Mount(char *device)
 	  if (fs->filsys->s_fsize*1024 > length)
 	    {
 	      fprintf(stderr,
-		      "%s: file size (%d) too small for file "
-		      "system size (%d).\n",
+		      "%s: file size (%ld) too small for file "
+		      "system size (%ld).\n",
 		      device,length,fs->filsys->s_fsize*1024);
 	      free(fs);
 	      fs = NULL;

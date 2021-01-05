@@ -16,7 +16,7 @@ static char *ipc_cat_revision = "$Id: ipc_cat.c,v 1.4 2000/10/25 15:32:12 pete E
 
 #include "ipc_utils.h"
 #include <stdio.h>
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
   IPC_Filsys *fs;
   IPC_File *fp;

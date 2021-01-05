@@ -17,6 +17,8 @@ static char *ipc_ls_revision = "$Id: ipc_ls.c,v 1.4 2000/10/25 15:32:12 pete Exp
 #include "ipc_utils.h"
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
+#include <string.h>
 
 static void ls(const char *path, const struct stat *stat)
 {
@@ -51,13 +53,13 @@ static void ls(const char *path, const struct stat *stat)
   else if (stat->st_gid == 100) group = "user";
   else sprintf(group,"%8d",stat->st_gid);
 
-  printf("%4d %8s%8s%7d ",stat->st_nlink, user, group, stat->st_size);
+  printf("%4d %8s%8s%7ld ",stat->st_nlink, user, group, stat->st_size);
   tm = localtime(&stat->st_mtime);
   printf("%s %2d %5d ",months[tm->tm_mon], tm->tm_mday, tm->tm_year+1900);
   printf("%s\n",path);
 }
 
-main(int argc, char **argv)
+int main(int argc, char **argv)
 {
   IPC_Filsys *fs;
   IPC_File *fp;
@@ -80,7 +82,7 @@ main(int argc, char **argv)
   fp = IPC_open(fs,path);
   if (!fp)
     {
-      fprintf(stderr,"%s: no such file or directory\n");
+      fprintf(stderr,"%s: no such file or directory\n", path);
       return -1;
     }
   if (!dinode_isdir(fp->dinode))
